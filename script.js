@@ -1,5 +1,5 @@
 // ---------- Helpers ----------
-const KEY = "stokkie-v1";
+const KEY = "stokkie-v2";
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = (n) => "R" + Number(n).toLocaleString("en-ZA");
@@ -17,12 +17,12 @@ const initial = (n) => (n.trim()[0] || "?").toUpperCase();
 // ---------- State ----------
 function seed() {
   const now = new Date(), cur = monthKey(now), prev = addMonths(cur, -1);
-  const members = ["Ntombi", "Sipho", "Thandi", "Lerato", "Bongani", "Zanele", "Mpho", "Kagiso"].map((name) => ({ id: uid(), name, phone: "" }));
+  const members = ["Jenet", "Sipho", "Thandi", "Lerato", "Bongani", "Zanele", "Mpho", "Kagiso"].map((name) => ({ id: uid(), name, phone: "" }));
   const dateIn = (k, i) => { const [y, m] = parts(k); const d = k === cur ? Math.min(now.getDate(), 1 + i) : 2 + i; return y + "-" + pad(m) + "-" + pad(d); };
   const ledger = [];
   members.forEach((m, i) => ledger.push({ id: uid(), memberId: m.id, month: prev, amount: 500, date: dateIn(prev, i) }));
   [0, 1, 3, 4, 5].forEach((idx, i) => ledger.push({ id: uid(), memberId: members[idx].id, month: cur, amount: 500, date: dateIn(cur, i) }));
-  return { group: { name: "Ntombi's Monthly Stokvel", amount: 500 }, members, ledger, startMonth: prev, payouts: { [prev]: members[0].id } };
+  return { group: { name: "Jenet's Monthly Stokvel", amount: 500 }, members, ledger, startMonth: prev, payouts: { [prev]: members[0].id } };
 }
 let state;
 try { state = JSON.parse(localStorage.getItem(KEY)); } catch (e) { state = null; }
