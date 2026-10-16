@@ -2,9 +2,10 @@
 
 A mobile-first web app that helps stokvel (community savings) groups track contributions, remind late members on WhatsApp and run a fair payout rotation.
 
-**Live app:** add your Vercel link here
-**Author:** Jenet Gilman ([GitHub](https://github.com/jannomgil-coder))
-**Built for:** ASA 23 design-thinking and investor-pitch project
+- **Live app:** https://stokkieinvestorpitch.vercel.app/
+- **Source code:** https://github.com/jannomgil-coder/stokkie_investor_pitch
+- **Author:** Jenet Gilman
+- **Built for:** ASA 23 design-thinking and investor-pitch project
 
 ## The problem
 About 800,000 stokvels with more than 11 million members save roughly R50 billion a year in South Africa (figures from the National Stokvel Association of South Africa, NASASA). Many groups still track payments in notebooks and WhatsApp messages. Payments get lost, chasing late members is awkward, and disputes damage trust.
